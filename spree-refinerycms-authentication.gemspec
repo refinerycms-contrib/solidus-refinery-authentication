@@ -13,6 +13,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^spec/})
   gem.require_paths = ["lib"]
 
-  gem.add_runtime_dependency 'spree', '~> 1.2'
-  gem.add_runtime_dependency 'refinerycms', '~> 2.0'
+  gem.add_runtime_dependency 'spree', '~> 2.3.0.beta'
+  gem.add_runtime_dependency 'refinerycms', '~> 3.0.0.dev'
 end
