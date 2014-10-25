@@ -17,22 +17,24 @@ Add Spree and this gem to your Gemfile:
 gem 'spree', github: 'spree/spree', branch: '2-3-stable'
 gem 'spree-refinerycms-authentication', github: 'bricesanchez/spree-refinery-authentication', branch: '2-3-stable'
 ```
+
+> **Note:** DON'T install the gem `spree_auth_devise` otherwise the authentication on Spree will fail. The authentication is provided by RefineryCMS and included in the gem `refinerycms`.
     
 Run bundler, then install Spree
 
     bundle
     rails g spree:install
-    
-**Note:** The Spree installer will automatically copy and run a migration from this gem. If you want to copy
-the migration manually, you can use the following command:
-
     rake railties:install:migrations FROM=spree_refinery_authentication
     
-Optionally put this line at the top of config/routes.rb to use RefineryCMS for your home page:
+Then, put those lines in config/routes.rb to use RefineryCMS and Spree together and remove routes conflicts
 
 ```ruby
 root :to => "refinery/pages#home"
+mount Spree::Core::Engine, :at => '/shop'
+mount Refinery::Core::Engine, at: '/'
 ```
+
+> **Note:** If you try to mount both engines `at => '/'`, Refinery will try to display a page even if you request a Spree page. Every page load will be slow.
 
 Start your application, and create a RefineryCMS user. You can then make yourself a Spree admin using the Rails console:
 
