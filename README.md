@@ -40,7 +40,7 @@ Start your application, and create a RefineryCMS user. You can then make yoursel
 
 ```ruby
 rails console
-> Refinery::User.first.spree_roles << Spree::Role.find_or_create_by_name("admin")
+> Refinery::User.first.spree_roles << Spree::Role.find_by_name("admin")
 ```
     
 All done! You should now be able to access Refinery at [http://localhost:3000/refinery](http://localhost:3000/refinery) and Spree at [http://localhost:3000/admin](http://localhost:3000/admin).
