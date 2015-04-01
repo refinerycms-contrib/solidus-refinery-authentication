@@ -2,20 +2,20 @@ Spree::User.class_eval do
   # The default NilUser has all roles and can access all plugins.
   # Should be overridden in authentication solutions.
   def has_role?(role)
-    true
+    admin?
   end
 
   # Returns all registered plugins.
   # Should be overridden in authentication solutions.
   def plugins
-    Refinery::Plugins.registered
+    admin? ? Refinery::Plugins.registered : Refinery::Plugins.new
   end
 
   # Returns true.
   # Should be overridden in authentication solutions.
   # A real solution might be: `Refinery::Plugins.active.names.include?(name)`
   def has_plugin?(name)
-    true
+    plugins.names.include?(name)
   end
 
   # Returns a URL to the first plugin with a URL in the menu. Used for
