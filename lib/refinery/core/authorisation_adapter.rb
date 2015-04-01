@@ -1,11 +1,11 @@
-module Refinery
-  module Core
-    class AuthorisationAdapter < Zilch::Authorisation::Adapters::Default
+require "refinery/core/authorisation_adapter"
 
-      def current_user
-        @current_user ||= Spree::User.new
-      end
+module SpreeRefineryAuthentication
+  class AuthorisationAdapter < Refinery::Core::AuthorisationAdapter
 
+    def current_user
+      @current_user ||= Spree::User.new
     end
+
   end
 end
