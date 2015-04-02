@@ -6,6 +6,7 @@ Refinery::AdminController.class_eval do
     begin
       super
     rescue Zilch::Authorisation::NotAuthorisedException
+      session["spree_user_return_to"] = request.path
       redirect_to spree.admin_login_path and return
     end
   end
