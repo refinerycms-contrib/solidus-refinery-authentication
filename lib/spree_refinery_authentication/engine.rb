@@ -1,4 +1,5 @@
 require 'refinery/engine'
+require 'zilch/authorisation'
 
 module SpreeRefineryAuthentication
   class Engine < Rails::Engine

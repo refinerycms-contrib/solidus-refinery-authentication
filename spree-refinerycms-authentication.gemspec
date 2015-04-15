@@ -15,4 +15,5 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'spree'
   gem.add_runtime_dependency 'refinerycms'
+  gem.add_runtime_dependency 'zilch-authorisation'
 end
