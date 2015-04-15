@@ -4,9 +4,7 @@ ActionController::Base.class_eval do
   prepend_before_action :detect_spreefinery_single_sign_on!
 
   def refinery_user?
-    if current_spree_user && current_spree_user.admin?
-      true
-    end
+    current_spree_user && current_spree_user.admin?
   end
 
   private
