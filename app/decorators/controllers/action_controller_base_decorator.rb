@@ -3,10 +3,6 @@ require "spree_refinery_authentication/authorisation_manager"
 ActionController::Base.class_eval do
   prepend_before_action :detect_spreefinery_single_sign_on!
 
-  def refinery_user?
-    current_spree_user && current_spree_user.admin?
-  end
-
   private
   # This relies on a method added to lib/spree_refinery_authentication/authorisation_adapter
   def detect_spreefinery_single_sign_on!
