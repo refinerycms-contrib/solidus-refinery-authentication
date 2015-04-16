@@ -2,9 +2,7 @@ module Refinery
   module AuthenticationHelper
 
     def refinery_user?
-      if current_spree_user && current_spree_user.admin?
-        true
-      end
+      current_spree_user && current_spree_user.admin?
     end
 
   end
