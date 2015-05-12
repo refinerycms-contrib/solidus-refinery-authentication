@@ -6,7 +6,9 @@ module SpreeRefineryAuthentication
 
     # The Spree user needs to be an admin to access Refinery's backend.
     def authenticate!
-      raise Zilch::Authorisation::NotAuthorisedException unless adapter.current_user.admin?
+      unless adapter.current_user.admin?
+        raise Zilch::Authorisation::NotAuthorisedException
+      end
 
       adapter.current_user
     end
@@ -20,6 +22,5 @@ module SpreeRefineryAuthentication
     def set_user!(user)
       adapter.current_user = user
     end
-
   end
 end

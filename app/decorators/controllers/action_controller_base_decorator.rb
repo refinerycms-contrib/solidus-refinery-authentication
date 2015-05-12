@@ -1,21 +1,25 @@
 require "spree_refinery_authentication/authorisation_manager"
 
-ActionController::Base.class_eval do
-  prepend_before_action :detect_spreefinery_single_sign_on!
+module SpreeAuthenticationActionControllerBaseDecoration
+  def self.prepended(base)
+    base.prepend_before_action :detect_spreefinery_single_sign_on!
+  end
 
-  def refinery_user?
-    current_spree_user && current_spree_user.admin?
+  protected
+  def refinery_users_exist?
+    raise not_yet_implemented
   end
 
   private
-  # This relies on a method added to lib/spree_refinery_authentication/authorisation_adapter
+  def refinery_authorisation_manager
+    @refinery_authorisation_manager ||= SpreeRefineryAuthentication::AuthorisationManager.new
+  end
+
   def detect_spreefinery_single_sign_on!
     if current_spree_user
       refinery_authorisation_manager.set_user!(current_spree_user)
     end
   end
-
-  def refinery_authorisation_manager
-    @refinery_authorisation_manager ||= SpreeRefineryAuthentication::AuthorisationManager.new
-  end
 end
+
+ActionController::Base.send :prepend, SpreeAuthenticationActionControllerBaseDecoration
