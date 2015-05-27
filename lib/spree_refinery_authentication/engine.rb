@@ -3,7 +3,11 @@ require 'zilch/authorisation'
 
 module SpreeRefineryAuthentication
   class Engine < Rails::Engine
+
     include Refinery::Engine
+    engine_name "spree_refinery_authentication"
+
+    config.autoload_paths += %W( #{config.root}/lib )
 
     before_inclusion do
       Refinery::Plugin.register do |plugin|
@@ -13,8 +17,6 @@ module SpreeRefineryAuthentication
         plugin.always_allow_access = true
       end
     end
-
-    engine_name "spree_refinery_authentication"
 
     config.to_prepare do
       if defined?(WillPaginate)
