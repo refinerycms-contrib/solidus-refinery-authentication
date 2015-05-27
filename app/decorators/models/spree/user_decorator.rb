@@ -5,6 +5,8 @@ Spree::User.class_eval do
     case
     when role == :superuser
       admin?
+    when role == :refinery
+      admin?
     else
       false
     end
