@@ -20,6 +20,10 @@ Spree::User.class_eval do
     )
   end
 
+  def has_plugin?(name)
+    admin?
+  end
+
   def landing_url
     active_plugins.in_menu.first_url_in_menu
   end
