@@ -1,5 +1,7 @@
 # Spree RefineryCMS Authentication
 
+[![Build Status](https://travis-ci.org/bricesanchez/spree-refinery-authentication.svg?branch=master)](https://travis-ci.org/refinery/refinerycms) [![Code Climate](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication/badges/gpa.svg)](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication) [![Test Coverage](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication/badges/coverage.svg)](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication/coverage)
+
 This gem allows [Spree 3.0+](http://spreecommerce.com/) and [Refinery CMS 3.0+](http://refinerycms.com/) to share the same authentication system (Devise).
 
 ## Installation
@@ -34,7 +36,7 @@ Run bundler, then install Spree
 Change the `Spree.user_class` in the initializer `config/initializer/spree.rb`
 
     Spree.user_class = "Spree::User"
-    
+
 Run the migrations
 
     rake db:migrate
