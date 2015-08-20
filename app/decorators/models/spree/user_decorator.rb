@@ -7,6 +7,8 @@ Spree::User.class_eval do
       admin?
     when role == :refinery
       admin?
+    when role == :user
+      has_spree_role?('user')
     else
       false
     end
@@ -21,7 +23,7 @@ Spree::User.class_eval do
   end
 
   def has_plugin?(name)
-    admin?
+    active_plugins.names.include?(name)
   end
 
   def landing_url
