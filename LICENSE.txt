@@ -1,4 +1,4 @@
-Copyright (c) 2012 Adrian Macneil
+Copyright (c) 2015 Brice Sanchez, and other contributors. All rights reserved.
 
 MIT License
 

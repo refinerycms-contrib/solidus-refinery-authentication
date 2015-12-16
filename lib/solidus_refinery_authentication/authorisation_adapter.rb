@@ -1,6 +1,6 @@
 require "refinery/core/authorisation_adapter"
 
-module SpreeRefineryAuthentication
+module SolidusRefineryAuthentication
   class AuthorisationAdapter < Refinery::Core::AuthorisationAdapter
 
     # If no user exists, we should use a blank Spree::User (non-admin).

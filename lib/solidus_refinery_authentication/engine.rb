@@ -1,17 +1,17 @@
 require 'refinery/engine'
 require 'zilch/authorisation'
 
-module SpreeRefineryAuthentication
+module SolidusRefineryAuthentication
   class Engine < Rails::Engine
 
     include Refinery::Engine
-    engine_name "spree_refinery_authentication"
+    engine_name "solidus_refinery_authentication"
 
     config.autoload_paths += %W( #{config.root}/lib )
 
     before_inclusion do
       Refinery::Plugin.register do |plugin|
-        plugin.name = 'spree_refinery_authentication'
+        plugin.name = 'solidus_refinery_authentication'
         plugin.pathname = root
         plugin.hide_from_menu = true
         plugin.always_allow_access = true

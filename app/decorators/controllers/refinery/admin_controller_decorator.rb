@@ -1,4 +1,4 @@
-module SpreeRefineryAuthenticationAdminControllerDecorator
+module SolidusRefineryAuthenticationAdminControllerDecorator
   protected
   def authenticate_refinery_user!
     begin
@@ -16,4 +16,4 @@ module SpreeRefineryAuthenticationAdminControllerDecorator
   end
 end
 
-Refinery::AdminController.send :prepend, SpreeRefineryAuthenticationAdminControllerDecorator
+Refinery::AdminController.send :prepend, SolidusRefineryAuthenticationAdminControllerDecorator

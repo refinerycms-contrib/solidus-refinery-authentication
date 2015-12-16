@@ -1,10 +1,10 @@
 require "refinery/core/authorisation_manager"
-require "spree_refinery_authentication/authorisation_adapter"
+require "solidus_refinery_authentication/authorisation_adapter"
 
-module SpreeRefineryAuthentication
+module SolidusRefineryAuthentication
   class AuthorisationManager < Refinery::Core::AuthorisationManager
 
-    # The Spree user needs to be an admin to access Refinery's backend.
+    # The Solidus user needs to be an admin to access Refinery's backend.
     def authenticate!
       unless adapter.current_user.admin?
         raise Zilch::Authorisation::NotAuthorisedException
@@ -15,7 +15,7 @@ module SpreeRefineryAuthentication
 
     # Override the default adapter specified in the superclass.
     def default_adapter
-      @default_adapter ||= SpreeRefineryAuthentication::AuthorisationAdapter.new
+      @default_adapter ||= SolidusRefineryAuthentication::AuthorisationAdapter.new
     end
 
     # This allows a user to be supplied, bypassing the usual detection.

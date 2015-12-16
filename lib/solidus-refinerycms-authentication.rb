@@ -1,0 +1,1 @@
+require "solidus_refinery_authentication/engine"
