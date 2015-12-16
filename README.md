@@ -1,6 +1,6 @@
 # Solidus Refinery CMS Authentication
 
-[![Build Status](https://travis-ci.org/bricesanchez/solidus-refinery-authentication.svg?branch=master)](https://travis-ci.org/bricesanchez/solidus-refinery-authentication) [![Code Climate](https://codeclimate.com/github/bricesanchez/solidus-refinery-authentication/badges/gpa.svg)](https://codeclimate.com/github/bricesanchez/solidus-refinery-authentication) [![Test Coverage](https://codeclimate.com/github/bricesanchez/solidus-refinery-authentication/badges/coverage.svg)](https://codeclimate.com/github/bricesanchez/solidus-refinery-authentication/coverage)
+[![Build Status](https://travis-ci.org/refinerycms-contrib/solidus-refinery-authentication.svg?branch=master)](https://travis-ci.org/refinerycms-contrib/solidus-refinery-authentication) [![Code Climate](https://codeclimate.com/github/refinerycms-contrib/solidus-refinery-authentication/badges/gpa.svg)](https://codeclimate.com/github/refinerycms-contrib/solidus-refinery-authentication) [![Test Coverage](https://codeclimate.com/github/refinerycms-contrib/solidus-refinery-authentication/badges/coverage.svg)](https://codeclimate.com/github/refinerycms-contrib/solidus-refinery-authentication/coverage)
 
 This gem is a Refinery CMS and Solidus E-commerce connector.
 
@@ -36,7 +36,7 @@ Add Solidus and those gems to your Gemfile:
 
     gem 'solidus'
     gem 'solidus_auth_devise'
-    gem 'solidus-refinerycms-authentication', github: 'bricesanchez/solidus-refinery-authentication', branch: '3-0-stable'
+    gem 'solidus-refinerycms-authentication', github: 'refinerycms-contrib/solidus-refinery-authentication', branch: '3-0-stable'
 
 > **Note:** DON'T install the gem `refinerycms-authentication-devise`. The authentication will be provided by Solidus and included in the gem `solidus_auth_devise`.
 

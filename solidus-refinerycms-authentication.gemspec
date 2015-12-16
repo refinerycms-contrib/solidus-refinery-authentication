@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.authors       = ["Brice Sanchez", "Philip Arndt"]
   s.description   = "A Refinery CMS and Solidus connector"
   s.summary       = "Solidus has a pluggable authentication system. This will tell Refinery CMS to use Solidus user model and authentication."
-  s.homepage      = "https://github.com/bricesanchez/solidus-refinery-authentication"
+  s.homepage      = "https://github.com/refinerycms-contrib/solidus-refinery-authentication"
 
   s.files         = `git ls-files`.split($/)
   s.test_files    = s.files.grep(%r{^spec/})
