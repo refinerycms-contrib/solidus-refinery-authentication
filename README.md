@@ -1,8 +1,18 @@
-# Spree RefineryCMS Authentication
+# Spree Refinery CMS Authentication
 
 [![Build Status](https://travis-ci.org/bricesanchez/spree-refinery-authentication.svg?branch=master)](https://travis-ci.org/bricesanchez/spree-refinery-authentication) [![Code Climate](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication/badges/gpa.svg)](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication) [![Test Coverage](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication/badges/coverage.svg)](https://codeclimate.com/github/bricesanchez/spree-refinery-authentication/coverage)
 
-This gem allows [Spree 3.0+](http://spreecommerce.com/) and [Refinery CMS 3.0+](http://refinerycms.com/) to share the same authentication system (Devise).
+This gem is a Refinery CMS and Spree E-commerce connector.
+
+## Key features
+
+* It provides tabs in Refinery CMS and Spree menus to easily switch between both backends
+* Shares admin sessions and user abilities between Refinery CMS and Spree.
+
+## Compatibility
+
+* [Spree 3.0+](http://spreecommerce.com/)
+* [Refinery CMS 3.0+](http://refinerycms.com/)
 
 ## Installation
 
