@@ -36,7 +36,7 @@ Add Solidus and those gems to your Gemfile:
 
     gem 'solidus'
     gem 'solidus_auth_devise'
-    gem 'solidus-refinerycms-authentication', github: 'refinerycms-contrib/solidus-refinery-authentication', branch: '3-0-stable'
+    gem 'solidus-refinerycms-authentication', github: 'refinerycms-contrib/solidus-refinery-authentication', branch: 'master'
 
 > **Note:** DON'T install the gem `refinerycms-authentication-devise`. The authentication will be provided by Solidus and included in the gem `solidus_auth_devise`.
 
